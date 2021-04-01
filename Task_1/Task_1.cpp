@@ -73,10 +73,10 @@ bool isDetectionHighPoint(double max, double value, double first, int step, int 
 	{
 		return isVisibilityFromAbove(max, value, first, step, stepMax);
 	}
-/*  else if (max == value and max == first) // Если принять, что наблюдатель стоя на первой точке имеет свою высоту
+    else if (max == value and max == first) // Если принять, что наблюдатель стоя на первой точке имеет свою высоту
 	{
 		return false;
-	}*/
+	}
 	else if (max < value)
 	{
 		return false;
@@ -86,7 +86,7 @@ bool isDetectionHighPoint(double max, double value, double first, int step, int 
 
 bool isVisibilityFromAbove(double max, double value, double first, int step, int stepMax)
 {
-	if (stepMax / abs(first - max) >= step / abs(first - value)) // знак > если принять, что наблюдатель стоя на первой точке имеет свою высоту
+	if (stepMax / abs(first - max) > step / abs(first - value)) // знак > если принять, что наблюдатель стоя на первой точке имеет свою высоту
 	{
 		return true;
 	}
