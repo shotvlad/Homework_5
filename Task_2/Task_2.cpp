@@ -41,8 +41,17 @@ void rankEnter(char array[])
 
 char enterStep(char number, int rookie)
 {
-	cout << "Specify the turn of " << rookie + 1 << " recruit in the line (< or >): ";
-	cin >> number;
+	while (true) {
+		cout << "Specify the turn of " << rookie + 1 << " recruit in the line (< or >): ";
+		cin >> number;
+
+		if (number == '>' or number == '<') {
+			break;
+		} 
+		else {
+			cin.clear();
+		}
+	}
 
 	return number;
 }
