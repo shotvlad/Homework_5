@@ -50,6 +50,7 @@ char enterStep(char number, int rookie)
 		} 
 		else {
 			cin.clear();
+			while (cin.get() != '\n');
 		}
 	}
 
